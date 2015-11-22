@@ -14,18 +14,10 @@ namespace DemoAPI.Controllers
         [HttpGet]
         public IEnumerable<User> Get()
         {
-            return new User[]
+            using (UserContext Context = new UserContext())
             {
-              new User() { ID = 1, Name = "Hugo" },
-              new User() { ID = 2, Name = "AJ" }
-            };
-        }
-
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
+              return Context.Users.ToList();
+            }
         }
     }
 }

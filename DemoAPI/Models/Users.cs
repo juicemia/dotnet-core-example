@@ -1,3 +1,7 @@
+using System.Collections.Generic;
+using Microsoft.Data.Entity;
+using Microsoft.Extensions.PlatformAbstractions;
+
 namespace DemoAPI.Models
 {
   public class User
