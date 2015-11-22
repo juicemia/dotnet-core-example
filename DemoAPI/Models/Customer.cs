@@ -4,7 +4,7 @@ using Microsoft.Extensions.PlatformAbstractions;
 
 namespace DemoAPI.Models
 {
-  public class User
+  public class Customer
   {
     public int ID { get; set; }
     public string Name { get; set; }

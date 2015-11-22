@@ -4,9 +4,9 @@ using Microsoft.Extensions.PlatformAbstractions;
 
 namespace DemoAPI.Models
 {
-  public class UserContext : DbContext
+  public class CustomerContext : DbContext
   {
-    public DbSet<User> Users { get; set; }
+    public DbSet<Customer> Customers { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

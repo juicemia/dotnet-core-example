@@ -4,12 +4,12 @@ using Microsoft.Data.Entity.Migrations;
 
 namespace DemoAPI.Migrations
 {
-    public partial class UsersMigration : Migration
+    public partial class CustomersMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "User",
+                name: "Customer",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
@@ -18,13 +18,13 @@ namespace DemoAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_User", x => x.ID);
+                    table.PrimaryKey("PK_Customer", x => x.ID);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable("User");
+            migrationBuilder.DropTable("Customer");
         }
     }
 }
