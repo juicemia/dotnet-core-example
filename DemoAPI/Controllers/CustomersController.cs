@@ -22,7 +22,7 @@ namespace DemoAPI.Controllers
 
         // POST: /users/new
         [HttpPost("new")]
-        public Customer NewCustomer(Customer newCustomer)
+        public Customer NewCustomer([FromBody] Customer newCustomer)
         {
           using (CustomerContext Context = new CustomerContext())
           {
